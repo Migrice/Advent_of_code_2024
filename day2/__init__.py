@@ -1,5 +1,5 @@
 from parsers import read_file
-from .day2 import day2_part1
+from .day2 import day2_part1, day2_part2
 
 inputs = read_file("day2/data.txt")
 
@@ -15,6 +15,9 @@ def preprocess_data(items):
 
 def run_day2():
     input_data = preprocess_data(inputs)
-    result1 = sum([day2_part1(rule) for rule in input_data])
 
+    result1 = sum([day2_part1(rule) for rule in input_data])
     print("day2_part1 >>>>>>>>>>>>>>>>>>>>", result1)
+
+    result2 = sum([day2_part2(rule) for rule in input_data])
+    print("day2_part2 >>>>>>>>>>>>>>>>>>>>", result2)
